@@ -228,7 +228,7 @@
     <div class="title">Submitting a PR for a Mod to be added to the official LinuxServer.io repo</div>
     <div class="content">
     <ul>
-      <li>Ask the team to create a new branch named <code>&lt;baseimagename&gt;-&lt;modname&gt;</code> in this repo. Baseimage should be the name of the image the mod will be applied to. The new branch will be based on the [template branch](https://github.com/linuxserver/docker-mods/tree/template).</li>
+      <li>Ask the team to create a new branch named <code>&lt;baseimagename&gt;-&lt;modname&gt;</code> in this repo. Baseimage should be the name of the image the mod will be applied to. The new branch will be based on the <a href="https://github.com/linuxserver/docker-mods/tree/template">template branch</a>.</li>
       <li>Fork the repo, checkout the template branch.</li>
       <li>Edit the <code>Dockerfile</code> for the mod. <code>Dockerfile.complex</code> is only an example and included for reference; it should be deleted when done.</li>
       <li>Inspect the <code>root</code> folder contents. Edit, add and remove as necessary.</li>
@@ -236,7 +236,7 @@
       <li>Finally edit the <code>travis.yml</code>. Customize the build branch, and the vars for <code>BASEIMAGE</code> and <code>MODNAME</code>.</li>
       <li>Submit PR against the branch created by the team.</li>
       <li>Make sure that the commits in the PR are squashed.</li>
-      <li>Also make sure that the commit and PR titles are in the format of <code>&lt;imagename&gt;: &lt;modname&gt; &lt;very brief description like "initial release" or "update"&gt;</code>. Detailed description and further info should be provided in the body (ie. <code>code-server: python2 add python-pip</code>).</li>
+      <li>Also make sure that the commit and PR titles are in the format of <code>&lt;imagename&gt;: &lt;modname&gt; &lt;very brief description like "initial release" or "update"&gt;</code> (ie. <code>code-server: python2 add python-pip</code>). Detailed description and further info should be provided in the body.</li>
     </ul></div>`)
     }
 
