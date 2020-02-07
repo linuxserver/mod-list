@@ -42,6 +42,7 @@
       flex-direction: column;
       align-items: center;
       width: 100%;
+      margin-bottom: 50px;
     }
     h1 {
       font-size: 30px;
@@ -108,14 +109,15 @@
     .back-to-list, .add-mod {
       position: fixed;
       left: 0;
-      padding: 15px;
+      right: 0;
+      padding: 20px;
       background: #3eb99d;
       color: #fff;
-      top: 50%;
-      transform: rotate(270deg) translateZ(0);
-      transform-origin: 25px 25px;
+      bottom: 0;
       text-decoration: none;
       font-weight: 400;
+      text-align: center;
+      box-shadow: 0 -20px 10px #e8e8e8d4;
     }
     .add-mod {
       background: #b93e93;
@@ -149,7 +151,15 @@
       h1 {
         font-size: 50px;
         letter-spacing: 5px;
-
+      }
+      .back-to-list, .add-mod {
+        padding: 15px;
+        top: 50%;
+        bottom: auto;
+        right: auto;
+        transform: rotate(270deg) translateZ(0);
+        transform-origin: 25px 25px;
+        box-shadow: none;
       }
     }
 
