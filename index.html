@@ -237,8 +237,9 @@
       <li>Fork <a href="https://github.com/linuxserver/docker-mods/">this repo</a>, create a new branch based on the branch <code>template</code>.</li>
       <li>Edit the <code>Dockerfile</code> for the mod. <code>Dockerfile.complex</code> is only an example and included for reference; it should be deleted when done.</li>
       <li>Inspect the <code>root</code> folder contents. Edit, add and remove as necessary.</li>
+      <li>After all init scripts and services are created, run <code>find ./  -path "./.git" -prune -o \( -name "run" -o -name "finish" -o -name "check" \) -not -perm -u=x,g=x,o=x -print -exec chmod +x {} +</code> to fix permissions.</li>
       <li>Edit the readme with pertinent info, delete the instructions.</li>
-      <li>Finally edit the <code>travis.yml</code>. Customize the build branch, and the vars for <code>BASEIMAGE</code> and <code>MODNAME</code>.</li>
+      <li>Finally edit the <code>.github/workflows/BuildImage.yml</code>. Customize the vars for <code>BASEIMAGE</code> and <code>MODNAME</code>. Set the versioning logic if needed.</li>
       <li>Ask the team to create a new branch named <code>&lt;baseimagename&gt;-&lt;modname&gt;</code> in <a href="https://github.com/linuxserver/docker-mods/">this repo</a>. Baseimage should be the name of the image the mod will be applied to. The new branch will be based on the <a href="https://github.com/linuxserver/docker-mods/tree/template">template branch</a>.</li>
       <li>Submit PR against the branch created by the team.</li>
       <li>Make sure that the commits in the PR are squashed.</li>
